@@ -7,7 +7,6 @@ public class IncomeTaxCalculator {
 		DecimalFormat frm = new DecimalFormat("####0.00");
 		final double TAX_RATE_ABOVE_20K = 0.1;
 		final double TAX_RATE_ABOVE_40K = 0.2;
-		final double TAX_RATE_ABOVE_60K = 0.3;
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the taxable income: $");
 		double taxableIncome = scan.nextDouble();
