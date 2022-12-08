@@ -1,0 +1,5 @@
+Dete : 08-Dec-2022
+StudentID: 2213110410
+Fullname : Chonticha Gorpanna
+AKA : Chonticha178
+ClassDetail : User-Defined Method with String
