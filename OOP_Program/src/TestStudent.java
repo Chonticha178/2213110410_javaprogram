@@ -5,7 +5,7 @@ public class TestStudent {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("How many stdent in classroom : ");
-		int stu  = scan.nextInt();
+		int stu = scan.nextInt();
 		Student[] std = new Student[stu]; // define Array Object
 		System.out.println();
 		for (int i = 0; i < std.length; i++) {
@@ -14,6 +14,7 @@ public class TestStudent {
 			std[i].setName(scan.next());
 			System.out.print("Input student score : ");
 			std[i].setScore(scan.nextInt());
+			System.out.println("---------------------");
 			while (!std[i].checkScore()) {
 				System.out.print("Input student score, again :");
 				std[i].setScore(scan.nextInt());
@@ -30,10 +31,10 @@ public class TestStudent {
 		 */
 		for (Student STD : std) {
 			if (STD.isPass()) {
-				System.out.println(">> " + STD.getName() + " (" + STD.findGrade() + ") ");
+				System.out.println(">> " + STD.getName() + " get grade " + STD.findGrade());
 			}
 		}
-		
+
 	}
-	
+
 }
