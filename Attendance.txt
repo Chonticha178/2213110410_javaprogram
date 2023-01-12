@@ -1,5 +1,5 @@
-Dete : 22-Dec-2022
+Dete : 12-Jan-2023
 StudentID: 2213110410
 Fullname : Chonticha Gorpanna
 AKA : Chonticha178
-ClassDetail : Class and Object, Array of Object
+ClassDetail : GUI
