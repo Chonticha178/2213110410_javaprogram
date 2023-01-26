@@ -1,5 +1,5 @@
-Dete : 19-Jan-2023
+Dete : 26-Jan-2023
 StudentID: 2213110410
 Fullname : Chonticha Gorpanna
 AKA : Chonticha178
-ClassDetail : Encapsulation
+ClassDetail : Composition and Inheritance
