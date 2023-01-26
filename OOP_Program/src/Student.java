@@ -1,58 +1,61 @@
-
 public class Student {
-	// attributes
+	// The private instance variables
 	private String name;
-	private int score;
+	private String address;
+	// The courses and grades for the courses are kept in 2 parallel arrays
+	private String[] courses;
+	private int[] grades; // valid range is [0,100]
+	private int numCourses; // Number of courses taken so far
+	// Maximum number of courses taken by student
+	private static final int MAX_COURSE = 30;
 
-	// methods
-	public void setName(String Name) {
-		name = Name;
+	/** Constructor */
+	public Student(String name, String address) {
+		this.name = name;
+		this.address = address;
+		courses = new String[MAX_COURSE];
+		grades = new int[MAX_COURSE];
+		numCourses = 0;
 	}
 
+	// The public getters and setters.
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
-	public void setScore(int Score) {
-		score = Score;
+	public String getAddress() {
+		return this.address;
 	}
 
-	public int getScore() {
-		return score;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public boolean checkScore() {
-		if (score >= 0 && score <= 100)
-			return true;
-		else
-			return false;
+	public String toString() {
+		return getName() + " (" + getAddress() + ")";
 	}
 
-	public boolean isPass() {
-		if (score >= 50)
-			return true;
-		else
-			return false;
+	/** Adds a course and grade */
+	public void addCourseGrade(String course, int grade) {
+		courses[numCourses] = course;
+		grades[numCourses] = grade;
+		++numCourses;
 	}
 
-	public String findGrade() {
-		if (score < 50) {
-			return "F";
-		} else if (score < 55) {
-			return "D";
-		} else if (score < 60) {
-			return "D+";
-		} else if (score < 65) {
-			return "C";
-		} else if (score < 70) {
-			return "C+";
-		} else if (score < 75) {
-			return "B";
-		} else if (score < 80) {
-			return "B+";
-		} else {
-			return "A";
+	/** Prints all course and their grades */
+	public void printsGrade() {
+		System.out.print(name);
+		for (int i = 0; i < numCourses; i++) {
+			System.out.print(" " + courses[i] + ":" + grades[i]);
 		}
+		System.out.println();
+	}
 
+	public double getAverageGrade() {
+		int sum = 0;
+		for (int i = 0; i < numCourses; i++) {
+			sum += grades[i];
+		}
+		return (double) sum / numCourses;
 	}
 }
