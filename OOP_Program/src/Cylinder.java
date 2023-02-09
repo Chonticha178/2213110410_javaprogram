@@ -16,7 +16,7 @@ public class Cylinder extends Circle {
 	}
 
 	public double getArea() {
-		return 2*Math.PI * (super.getRadius() + getHeigth());
+		return 2 * Math.PI * (super.getRadius() + getHeigth());
 	}
 
 	public String toString() {
