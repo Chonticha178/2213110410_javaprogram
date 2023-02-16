@@ -1,5 +1,5 @@
-Dete : 09-Fed-2023
+Dete : 16-Fed-2023
 StudentID: 2213110410
 Fullname : Chonticha Gorpanna
 AKA : Chonticha178
-ClassDetail :File and Exception Handling
+ClassDetail :File (Write/Read)
